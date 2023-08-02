@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CalculatorUI_ConstraintLayout" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.CalculatorUI_ConstraintLayout" parent="Base.Theme.CalculatorUI_ConstraintLayout" />
+    <style name="Watch_Scan_Icon" >
+        <item name="android:layout_margin">@dimen/WatchAndScanIconMargin </item>
+        <item name="android:background">@drawable/circle </item>
+
+    </style>
+    <style name="LinearlayoutForCalculatorRows" >
+        <item name="android:layout_width">match_parent </item>
+        <item name="android:layout_height">wrap_content </item>
+        <item name="android:layout_margin">@dimen/LinearlayoutMarginForCalculatorRows </item>
+        <item name="android:orientation">horizontal </item>
+    </style>
+    <style name="ViewForSpaces" >
+        <item name="android:layout_width">@dimen/ViewWidthAndHeight </item>
+        <item name="android:layout_height">@dimen/ViewWidthAndHeight </item>
+    </style>
+    <style name="RectangleContent" >
+        <item name="android:layout_width">@dimen/RectanglesWidthAndHeight </item>
+        <item name="android:layout_height">@dimen/RectanglesWidthAndHeight</item>
+        <item name="android:layout_weight"> 1 </item>
+        <item name="android:textSize">@dimen/ValuesTextSize </item>
+        <item name="android:textStyle">bold </item>
+        <item name="android:background">@drawable/rectangle </item>
+    </style>
+    <style name="LastRowRectangleContent" >
+        <item name="android:layout_width">95dp </item>
+        <item name="android:layout_height">@dimen/RectanglesWidthAndHeight</item>
+        <item name="android:layout_weight"> 1 </item>
+        <item name="android:textSize">@dimen/ValuesTextSize </item>
+        <item name="android:textStyle">bold </item>
+        <item name="android:background">@drawable/rectangle </item>
+    </style>
+    <style name="EqualRectangleContent" >
+        <item name="android:layout_width">0dp </item>
+        <item name="android:layout_height">@dimen/RectanglesWidthAndHeight</item>
+        <item name="android:textSize">@dimen/ValuesTextSize </item>
+        <item name="android:textStyle">bold </item>
+        <item name="android:background">@drawable/rectangle </item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ResultMarginTop">60dp</dimen>
+    <dimen name="ResultMarginEnd">30dp</dimen>
+    <dimen name="SecondLinearLayoutHeight">80dp</dimen>
+    <dimen name="SecondLinearLayoutPadding">15dp</dimen>
+    <dimen name="WatchIconWidthAndHeight">22dp</dimen>
+    <dimen name="ScanIconWidthAndHeight">21dp</dimen>
+    <dimen name="WatchAndScanIconMargin">5dp</dimen>
+    <dimen name="ValuesPaddingTop">5dp</dimen>
+    <dimen name="ValuesTextSize">24sp</dimen>
+    <dimen name="ValuesHeight">40dp</dimen>
+    <dimen name="LinearlayoutMarginForCalculatorRows">15dp</dimen>
+    <dimen name="RectanglesWidthAndHeight">60dp</dimen>
+    <dimen name="ShapeHeight">220dp</dimen>
+    <dimen name="ResultTextSize">48sp</dimen>
+    <dimen name="ViewWidthAndHeight">10dp</dimen>
+    <dimen name="Width16d">16dp</dimen>
+    <dimen name="Width24dp">24dp</dimen>
+    <dimen name="Width32dp">32dp</dimen>
+    <dimen name="Height16d">16dp</dimen>
+    <dimen name="Height24dp">24dp</dimen>
+    <dimen name="Height32dp">32dp</dimen>
+    <dimen name="TextSize8sp">8sp</dimen>
+    <dimen name="TextSize16sp">16sp</dimen>
+    <dimen name="TextSize24sp">24sp</dimen>
+    <dimen name="TextSize32sp">32sp</dimen>
+    <dimen name="Margin8dp">8dp</dimen>
+    <dimen name="Margin16dp">16dp</dimen>
+    <dimen name="Margin24dp">24dp</dimen>
+    <dimen name="Margin32dp">32dp</dimen>
+    <dimen name="Padding8dp">8dp</dimen>
+    <dimen name="Padding16dp">16dp</dimen>
+    <dimen name="Padding24dp">24dp</dimen>
+    <dimen name="Padding32dp">32dp</dimen>
+    <dimen name="Margin64dp">64dp</dimen>
+</resources>
