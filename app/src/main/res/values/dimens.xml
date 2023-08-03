@@ -10,7 +10,7 @@
     <dimen name="ValuesHeight">40dp</dimen>
     <dimen name="marginForCalculatorRows">15dp</dimen>
     <dimen name="RectanglesWidthAndHeight">60dp</dimen>
-    <dimen name="ShapeHeight">240dp</dimen>
+    <dimen name="ShapeHeight">230dp</dimen>
     <dimen name="ResultTextSize">48sp</dimen>
     <dimen name="ViewWidthAndHeight">10dp</dimen>
     <dimen name="width16">16dp</dimen>
