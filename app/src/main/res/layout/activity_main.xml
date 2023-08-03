@@ -13,23 +13,24 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/ShapeHeight"
         android:background="@drawable/background"
-        android:paddingBottom="@dimen/Padding32dp"
+        android:paddingBottom="@dimen/padding32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginTop="@dimen/Margin16dp"
+        android:layout_marginStart="@dimen/margin16"
+        android:layout_marginTop="@dimen/margin32"
         android:text="@string/calculatorText"
         android:textColor="@color/white"
         android:textSize="@dimen/TextSize24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,8 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginEnd="@dimen/Margin32dp"
-        android:layout_marginBottom="@dimen/Margin24dp"
+        android:layout_marginEnd="@dimen/margin32"
+        android:layout_marginBottom="@dimen/margin24"
         android:textColor="@color/white"
         android:textSize="@dimen/ResultTextSize"
         app:layout_constraintBottom_toBottomOf="@+id/view"
@@ -50,7 +51,7 @@
         android:id="@+id/input_values"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="@dimen/margin8"
         android:gravity="end"
         android:textDirection="ltr"
         android:hint="@string/enter_numbers"
@@ -58,7 +59,7 @@
         android:paddingTop="@dimen/ValuesPaddingTop"
         android:textColor="@color/black"
         android:textSize="@dimen/ValuesTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="@+id/division_button"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/mod_button" />
@@ -66,11 +67,11 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/history"
         style="@style/Watch_Scan_Icon"
-        android:layout_width="@dimen/Width24dp"
+        android:layout_width="@dimen/width24"
         android:layout_height="@dimen/Height24dp"
-        android:layout_marginBottom="4dp"
-        android:src="@drawable/outline_watch_later_24"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:layout_marginBottom="@dimen/margin8"
+        android:src="@drawable/ic_watch"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="@+id/more"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/more"
@@ -99,10 +100,10 @@
         android:id="@+id/more"
         android:layout_width="@dimen/RectanglesWidthAndHeight"
         android:layout_height="@dimen/RectanglesWidthAndHeight"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="130dp"
         android:layout_weight="1"
         android:background="@drawable/rectangle"
-        android:src="@drawable/three_dots_svgrepo_com"
+        android:src="@drawable/three_dots"
         app:layout_constraintEnd_toStartOf="@+id/clear_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,18 +120,18 @@
         app:layout_constraintTop_toTopOf="@+id/more" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="288dp" />
+        app:layout_constraintGuide_begin="331dp" />
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/multiply_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
-        android:text="x"
+        android:layout_marginTop="@dimen/margin24"
+        android:text="@string/multiply"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/three_button"
@@ -150,7 +151,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/two_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/two"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toStartOf="@+id/three_button"
@@ -161,7 +162,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/three_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/three"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toStartOf="@+id/multiply_button"
@@ -173,7 +174,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/six_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/six"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toStartOf="@+id/minus_button"
@@ -184,7 +185,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/four_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/four"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toStartOf="@+id/five_button"
@@ -195,7 +196,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/five_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/five"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toStartOf="@+id/six_button"
@@ -206,7 +207,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/minus_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/minus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -217,7 +218,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/eight_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/eight"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toStartOf="@+id/nine_button"
@@ -228,7 +229,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/seven_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/seven"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toStartOf="@+id/eight_button"
@@ -239,7 +240,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nine_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/nine"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toStartOf="@+id/plus_button"
@@ -250,7 +251,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/plus_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/plus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -261,7 +262,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/zero_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/zero"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toEndOf="@+id/seven_button"
@@ -272,7 +273,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/point_button"
         style="@style/RectangleContent"
-        android:layout_marginTop="@dimen/Margin24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/dot"
         android:onClick="getInputNumbers"
         app:layout_constraintEnd_toEndOf="@+id/eight_button"
@@ -283,7 +284,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/equal_button"
         style="@style/EqualRectangleContent"
-        android:layout_marginTop="@dimen/Margin24dp"
+        android:layout_marginTop="@dimen/margin24"
         android:text="@string/equal"
         app:layout_constraintEnd_toEndOf="@+id/plus_button"
         app:layout_constraintStart_toStartOf="@+id/nine_button"
