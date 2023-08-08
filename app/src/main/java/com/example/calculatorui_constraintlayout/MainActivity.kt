@@ -5,56 +5,48 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.example.calculatorui_constraintlayout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var calculatedResult:TextView
-    private lateinit var inputNumbers:TextView
-    private lateinit var buttonClear:Button
-    private lateinit var buttonDivide:Button
-    private lateinit var buttonMultiply:Button
-    private lateinit var buttonMinus:Button
-    private lateinit var buttonPlus:Button
-    private lateinit var buttonMod:Button
-    private lateinit var buttonResult:Button
     private var firstNumber:Double=0.0
-    private var currentOperation:Operations?=null
-
+    var currentOperation:Operations?=null
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        initViews()
+        binding= ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         addCallBacks()
 
     }
 
     private fun addCallBacks() {
-        buttonClear.setOnClickListener {
+        binding.clearButton.setOnClickListener {
             clear()
         }
-        buttonPlus.setOnClickListener {
+        binding.plusButton.setOnClickListener {
             preparation(Operations.Plus)
         }
-        buttonMinus.setOnClickListener {
+        binding.minusButton.setOnClickListener {
             preparation(Operations.Minus)
         }
-        buttonDivide.setOnClickListener {
+        binding.divisionButton.setOnClickListener {
             preparation(Operations.Division)
         }
-        buttonMultiply.setOnClickListener {
+        binding.multiplyButton.setOnClickListener {
             preparation(Operations.Multiply)
         }
-        buttonMod.setOnClickListener {
+        binding.modButton.setOnClickListener {
             preparation(Operations.Mod)
         }
 
-        buttonResult.setOnClickListener {
+        binding.equalButton.setOnClickListener {
             val finalResult =doOperation()
-            calculatedResult.text=finalResult.toString()
+            binding.result.text=finalResult.toString()
         }
 
     }
     private fun doOperation():Double {
-        val secondNumber=inputNumbers.text.toString().toDouble()
+        val secondNumber=binding.inputValues.text.toString().toDouble()
         return when(currentOperation){
             Operations.Plus -> firstNumber.plus(secondNumber)
             Operations.Minus -> firstNumber.minus(secondNumber)
@@ -65,31 +57,21 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun preparation(operation: Operations){
-        firstNumber=inputNumbers.text.toString().toDouble()
+        firstNumber=binding.inputValues.text.toString().toDouble()
         clear()
         currentOperation=operation
 
     }
     private fun clear() {
-        inputNumbers.text= ""
-        calculatedResult.text=""
+        binding.inputValues.text= ""
+        binding.result.text=""
     }
-    private fun initViews() {
-        calculatedResult=findViewById(R.id.result)
-        inputNumbers=findViewById(R.id.input_values)
-        buttonClear=findViewById(R.id.clear_button)
-        buttonDivide=findViewById(R.id.division_button)
-        buttonMultiply=findViewById(R.id.multiply_button)
-        buttonMinus=findViewById(R.id.minus_button)
-        buttonPlus=findViewById(R.id.plus_button)
-        buttonResult=findViewById(R.id.equal_button)
-        buttonMod=findViewById(R.id.mod_button)
-    }
+
     fun getInputNumbers(view: View) {
         val newDigit=( view as Button).text.toString()
-        val oldDigits=inputNumbers.text.toString()
+        val oldDigits=binding.inputValues.text.toString()
         val number=newDigit+oldDigits
-        inputNumbers.text=number
+        binding.inputValues.text=number
     }
 }
 

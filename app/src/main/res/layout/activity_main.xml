@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteX="-121dp"
-    tools:layout_editor_absoluteY="24dp">
+    tools:context=".MainActivity">
 
     <View
         android:id="@+id/view"
@@ -15,7 +13,6 @@
         android:background="@drawable/background"
         android:paddingBottom="@dimen/padding32"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin8"
         android:gravity="end"
-        android:textDirection="ltr"
+        android:textDirection="rtl"
         android:hint="@string/enter_numbers"
         android:maxLength="12"
         android:paddingTop="@dimen/ValuesPaddingTop"
